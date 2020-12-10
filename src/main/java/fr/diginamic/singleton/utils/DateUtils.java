@@ -12,6 +12,7 @@ public class DateUtils {
 	
 	/** Formateur par défaut: dd/mm/aaaa */
 	private static final DateTimeFormatter DEFAULT_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/YYYY");
+	private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
 	/** Formate une date en chaine de caractères
 	 * @param date date
@@ -28,6 +29,6 @@ public class DateUtils {
 	 */
 	public static LocalDateTime toDate(String dateStr) {
 		
-		return LocalDateTime.parse(dateStr, DEFAULT_FORMATTER);
+		return LocalDateTime.parse(dateStr, formatter);
 	}
 }
