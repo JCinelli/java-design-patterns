@@ -1,4 +1,4 @@
-package fr.diginamic;
+package fr.diginamic.factory;
 
 import static org.junit.Assert.*;
 
@@ -16,30 +16,25 @@ public class FactoryTest {
 	
 	ObjCoFactory objCoFactory;
 	
-	@Before
-	public void init() {
-		objCoFactory  = new ObjCoFactory();
-	}
-
 	@Test
 	public void testCaseTel() {
 		ObjetConnecte createObjCo = ObjCoFactory.createObjCo(TypeObjCo.Téléphone_Portable, 150);
 		
-		assertEquals(createObjCo.getClass(), TelephonePortable.class);
+		assertEquals(TelephonePortable.class, createObjCo.getClass());
 	}
 	
 	@Test
 	public void testCaseTabl() {
 		ObjetConnecte tablette = ObjCoFactory.createObjCo(TypeObjCo.Tablette, 1552);
 		
-		assertEquals(tablette.getClass(), Tablette.class);
+		assertEquals(Tablette.class, tablette.getClass());
 	}
 	
 	@Test
 	public void testCaseEnce() {
 		ObjetConnecte enceinte = ObjCoFactory.createObjCo(TypeObjCo.Enceinte_Connectee, 1454);
 		
-		assertEquals(enceinte.getClass(), EnceinteConnecte.class);
+		assertEquals(EnceinteConnecte.class, enceinte.getClass());
 	}
 
 }
