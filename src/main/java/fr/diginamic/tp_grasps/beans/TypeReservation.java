@@ -10,6 +10,7 @@ import javax.persistence.Id;
 @Entity
 public class TypeReservation {
 
+//	FIELDS
 	/** id */
 	@Id
 	private Long id;
@@ -23,6 +24,7 @@ public class TypeReservation {
 	/** reduction en % uniquement pour les clients premium */
 	private double reductionPourcent;
 
+//	CONSTRUCTORS
 	public TypeReservation() {
 		super();
 	}
@@ -34,6 +36,7 @@ public class TypeReservation {
 		this.reductionPourcent = reductionPourcent;
 	}
 
+//	GETTERS & SETTERS
 	/** Getter
 	 * @return the id
 	 */

@@ -10,6 +10,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class Client {
 
+//	FIELDS
 	@Id
 	private String identifiantClient;
 	
@@ -18,6 +19,7 @@ public class Client {
 	@OneToMany(mappedBy = "client")
 	private List<Reservation> reservations = new ArrayList<>();
 	
+//	CONSTRUCTORS
 	public Client() {
 		
 	}
@@ -28,6 +30,11 @@ public class Client {
 		this.premium = premium;
 	}
 
+	public void addReservation(Reservation reservation) {
+		this.reservations.add(reservation);
+	}
+	
+//	GETTERS & SETTERS
 	/** Getter
 	 * @return the identifiantClient
 	 */

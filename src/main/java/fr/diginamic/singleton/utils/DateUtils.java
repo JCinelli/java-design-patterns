@@ -1,6 +1,7 @@
 package fr.diginamic.singleton.utils;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 /** Classe utilitaire pour formatter des String en LocalDate et vice versa
@@ -19,5 +20,14 @@ public class DateUtils {
 	public static String format(LocalDate date) {
 		return DEFAULT_FORMATTER.format(date);
 		
+	}
+	
+	/** Transforme une date au format String en {@link LocalDateTime}
+	 * @param dateStr date au format String
+	 * @return LocalDateTime
+	 */
+	public static LocalDateTime toDate(String dateStr) {
+		
+		return LocalDateTime.parse(dateStr, DEFAULT_FORMATTER);
 	}
 }

@@ -10,6 +10,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Reservation {
 	
+//	FIELDS
 	@Id
 	private Long id;
 	
@@ -23,6 +24,7 @@ public class Reservation {
 	@JoinColumn(name="ID_CLIENT")
 	private Client client;
 	
+//	CONSTRUCTORS
 	public Reservation() {
 		
 	}
@@ -31,7 +33,17 @@ public class Reservation {
 		super();
 		this.date = date;
 	}
-
+	
+//	METHODS
+	public Reservation createReservation(LocalDateTime dateReservation, int nbPlaces, Client client) {
+		Reservation reservation = new Reservation(dateReservation);
+		reservation.setNbPlaces(nbPlaces);
+		reservation.setClient(client);
+		
+		return reservation;
+	}
+	
+//	GETTERS & SETTERS
 	/** Getter
 	 * @return the date
 	 */
