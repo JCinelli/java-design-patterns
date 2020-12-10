@@ -7,8 +7,9 @@ import fr.diginamic.tp_grasps.beans.Client;
 import fr.diginamic.tp_grasps.beans.Reservation;
 import fr.diginamic.tp_grasps.beans.TypeReservation;
 import fr.diginamic.tp_grasps.factory.ReservationFactory;
+import fr.diginamic.tp_grasps.interfaces.IReservationService;
 
-public class ReservationService {
+public class ReservationService implements IReservationService {
 	
 	private ClientService clientService;
 	
