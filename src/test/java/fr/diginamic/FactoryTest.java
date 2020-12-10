@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import fr.diginamic.factory.ObjCoFactory;
-import fr.diginamic.factory.entity.EnceinteConnectee;
+import fr.diginamic.factory.entity.EnceinteConnecte;
 import fr.diginamic.factory.entity.ObjetConnecte;
 import fr.diginamic.factory.entity.Tablette;
 import fr.diginamic.factory.entity.TelephonePortable;
@@ -39,7 +39,7 @@ public class FactoryTest {
 	public void testCaseEnce() {
 		ObjetConnecte enceinte = ObjCoFactory.createObjCo(TypeObjCo.Enceinte_Connectee, 1454);
 		
-		assertEquals(enceinte.getClass(), EnceinteConnectee.class);
+		assertEquals(enceinte.getClass(), EnceinteConnecte.class);
 	}
 
 }

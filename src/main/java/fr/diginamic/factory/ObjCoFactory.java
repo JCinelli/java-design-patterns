@@ -1,6 +1,6 @@
 package fr.diginamic.factory;
 
-import fr.diginamic.factory.entity.EnceinteConnectee;
+import fr.diginamic.factory.entity.EnceinteConnecte;
 import fr.diginamic.factory.entity.ObjetConnecte;
 import fr.diginamic.factory.entity.Tablette;
 import fr.diginamic.factory.entity.TelephonePortable;
@@ -15,7 +15,7 @@ public class ObjCoFactory {
 		case Tablette:
 			 return new Tablette(limiteVolts);
 		case Enceinte_Connectee:
-			 return new EnceinteConnectee(limiteVolts);
+			 return new EnceinteConnecte(limiteVolts);
 		default:
 			return null;
 		}
