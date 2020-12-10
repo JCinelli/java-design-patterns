@@ -28,7 +28,7 @@ public class ReservationService {
 		// Conversion de la date de réservation en LocalDateTime
 		LocalDateTime dateReservation = DateUtils.toDate(dateReservationStr);
 		
-		Reservation reservation = new ReservationFactory(client, dateReservation, type, nbPlaces).toReservation();
+		Reservation reservation = ReservationFactory.getInstance(client, dateReservation, type, nbPlaces);
 		
 		client.addReservation(reservation);
 		
